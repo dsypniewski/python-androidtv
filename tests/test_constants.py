@@ -185,7 +185,7 @@ class TestConstants(unittest.TestCase):
         # CMD_SCREEN_ON
         self.assertCommand(
             constants.CMD_SCREEN_ON,
-            r"(dumpsys power | grep 'Display Power' | grep -q 'state=ON' || dumpsys power | grep -q 'mScreenOn=true')",
+            r"(dumpsys power | grep 'Display Power' | grep -q 'state=ON' || dumpsys power | grep -q 'mScreenOn=true' || dumpsys display | grep -q 'mScreenState=ON')",
         )
 
         # CMD_SCREEN_ON_AWAKE_WAKE_LOCK_SIZE
